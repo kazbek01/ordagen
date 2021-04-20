@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>OrdaGen</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/simpleaudioplayer.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<section class="audio">
+    <a href="index.html" class="logo">
+        <img src="img/logo/logo.svg" alt="">
+    </a>
+    <div id="audio_content">
+        <div class="audio-container">
+            <img src="img/main/audio-cover.png" alt="">
+                    <audio id="player" src="audio/irina-kajratovna-5000_(muzzona.kz).mp3" crossorigin="anonymous"></audio>
+<!--            <audio controls id="player" src="audio/irina-kajratovna-5000_(muzzona.kz).mp3">-->
+<!--                <source src="horse.ogg" type="audio/ogg">-->
+<!--                <source src="audio/irina-kajratovna-5000_(muzzona.kz).mp3" type="audio/mpeg">-->
+<!--                Your browser does not support the audio element.-->
+<!--            </audio>-->
+        </div>
+    </div>
+    <a href="#" class="btn-plain btn-orange">Установить приложение</a>
+    <a href="#" class="btn-plain copyright-link">from buginholding.com</a>
+</section>
+<!--<audio src="audio/irina-kajratovna-5000_(muzzona.kz).mp3"></audio>-->
+<!--<audio controls>-->
+<!--    <source src="horse.ogg" type="audio/ogg">-->
+<!--    <source src="audio/irina-kajratovna-5000_(muzzona.kz).mp3" type="audio/mpeg">-->
+<!--    Your browser does not support the audio element.-->
+<!--</audio>-->
+<script src="js/libs.min.js"></script>
+<script src="js/jquery.simpleaudioplayer.js"></script>
+<script src="js/buffer-loader.js"></script>
+<script src="js/common.js"></script>
+<script>
+    // var context;
+    // var bufferLoader;
+    //
+    // function loadAndPlay() {
+    //     try {
+    //         context = new window.AudioContext();
+    //     }
+    //     catch(e) {
+    //         alert("Web Audio API no es soportado por este navegador");
+    //     }
+    //     bufferLoader = new BufferLoader(context,
+    //         [
+    //             'audio/irina-kajratovna-5000_(muzzona.kz).mp3'
+    //         ],
+    //         bufferLoadCompleted
+    //     );
+    //     bufferLoader.load();
+    // }
+    // var source;
+    //
+    // function bufferLoadCompleted(bufferList){
+    //     var kick = context.createBufferSource();
+    //     kick.buffer = bufferList[0];
+    //     kick.connect(context.destination);
+    //     kick.start(0);
+    // }
+    // function pause(){
+    //     kick.pause(0);
+    // }
+
+    // setTimeout(setPlayer(),10000);
+
+    // setTimeout(function(){ setPlayer(); }, 3000);
+    // window.onload = function() {
+    //     var context = new AudioContext();
+    // };
+
+    // One-liner to resume playback when user interacted with the page.
+    // document.querySelector('.audio-container').addEventListener('click', function() {
+    //     var context = new AudioContext();
+    //     context.resume().then(() => {
+    //         console.log('Playback resumed successfully');
+    //         console.log('status: ' + context.state);
+    // });
+    // });
+
+   var context = new (window.AudioContext || window.webkitAudioContext)();
+
+
+    // function setPlayer(){
+    //     $('#player').simpleAudioPlayer({
+    //         title: "Sample Music"
+    //     });
+    // }
+
+    //
+    $('.audio-container').click(function () {
+        context.resume();
+        // loadAndPlay();
+        // unlockAudioContext(audioCtx);
+        console.log('focus: ' + context.state);
+
+    });
+
+    $('#player').simpleAudioPlayer({
+        title: "Sample Music"
+    });
+    $(document).ready(function () {
+
+        $('.simpleAudioPlayer .trackInfo').after(
+            `
+             <div class="infoTrack">
+                    <h3>Осман империясының аңызы</h3>
+                    <p>Фариза Дулатова</p>
+                </div>
+            `
+        );
+    });
+</script>
+<!--<script>-->
+
+<!--    // var context = new (window.AudioContext || window.webkitAudioContext)();-->
+<!--    // context.createGain();-->
+
+<!--    // var audioCtx = new (window.AudioContext || window.webkitAudioContext)();-->
+<!--    // unlockAudioContext(audioCtx);-->
+<!--    //-->
+<!--    // function unlockAudioContext(audioCtx) {-->
+<!--    //     if (audioCtx.state === 'suspended') {-->
+<!--    //         var events = ['touchstart', 'touchend', 'mousedown', 'keydown'];-->
+<!--    //         var unlock = function unlock() {-->
+<!--    //             events.forEach(function (event) {-->
+<!--    //                 document.body.removeEventListener(event, unlock)-->
+<!--    //             });-->
+<!--    //             audioCtx.resume();-->
+<!--    //         };-->
+<!--    //-->
+<!--    //         events.forEach(function (event) {-->
+<!--    //             document.body.addEventListener(event, unlock, false)-->
+<!--    //         });-->
+<!--    //     }-->
+<!--    // }-->
+
+<!--    // window.onload = function() {-->
+<!--    //     var context = new AudioContext();-->
+<!--    // };-->
+
+<!--    window.onload = init;-->
+<!--    var context;-->
+<!--    var bufferLoader;-->
+
+<!--    function init() {-->
+<!--        // Fix up prefixing-->
+<!--        window.AudioContext = window.AudioContext || window.webkitAudioContext;-->
+<!--        context = new AudioContext();-->
+
+<!--        bufferLoader = new BufferLoader(-->
+<!--            context,-->
+<!--            [-->
+<!--                '/audio/irina-kajratovna-5000_(muzzona.kz).mp3'-->
+<!--            ],-->
+<!--            finishedLoading-->
+<!--        );-->
+
+<!--        bufferLoader.load();-->
+<!--    }-->
+
+<!--    function finishedLoading(bufferList) {-->
+<!--        // Create two sources and play them both together.-->
+<!--        var source1 = context.createBufferSource();-->
+<!--        source1.buffer = bufferList[0];-->
+<!--        source1.connect(context.destination);-->
+<!--        source1.start(0);-->
+<!--    }-->
+
+<!--    -->
+
+<!--    // context.onstatechange = function () {-->
+<!--    //     console.log('status: ' + context.state);-->
+<!--    // };-->
+<!--</script>-->
+</body>
+</html>

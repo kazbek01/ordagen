@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>OrdaGen</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<section class="audio subscribe">
+    <a href="index.html" class="logo">
+        <img src="img/logo/logo.svg" alt="">
+    </a>
+    <div class="subscribe-head">
+<!--        subscribe-deadline     class for brown color-->
+<!--        subscribe-deadline-end    class for red color-->
+        <p class="title-md">Жазылымның соңына дейін:</p>
+        <h3><span class="green-colored">49 күн</span> қалды</h3>
+        <img src="img/main/emoji-glad.png" alt="" class="emoji-glad">
+        <img src="img/main/emoji-think.png" alt="" class="emoji-think">
+        <img src="img/main/emoji-cry.png" alt="" class="emoji-cry">
+    </div>
+    <div class="subscribe-body">
+        <p class="title-md">Жазылымды создыру:</p>
+        <div class="subscription-list">
+            <div class="subscription-cover">
+                <div class="subscription-item">
+                    <div class="subscription-item-head">
+                        <h3>+3 ай</h3>
+                        <span class="discount-span">-30%</span>
+                    </div>
+                    <p>180 күнге тіркеліңіз</p>
+                    <div class="subscription-item-body">
+                        <h3>12 600 kzt</h3>
+                        <p class="text-through">18 000 kzt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="subscription-cover">
+                <div class="subscription-item active">
+                    <div class="subscription-item-head">
+                        <h3>+3 ай</h3>
+                        <span class="discount-span">-30%</span>
+                    </div>
+                    <p>180 күнге тіркеліңіз</p>
+                    <div class="subscription-item-body">
+                        <h3>12 600 kzt</h3>
+                        <p class="text-through">18 000 kzt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="subscription-cover">
+                <div class="subscription-item">
+                    <div class="subscription-item-head">
+                        <h3>+3 ай</h3>
+                        <span class="discount-span">-30%</span>
+                    </div>
+                    <p>180 күнге тіркеліңіз</p>
+                    <div class="subscription-item-body">
+                        <h3>12 600 kzt</h3>
+                        <p class="text-through">18 000 kzt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe-base">
+        <div class="switch-cover" id="switch-cover">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <div class="switch-caption">
+                <h3 class="d-inline-flex align-items-center">131 <i class="icon i-orda"></i></h3>
+                <p>
+                    бонустарды пайдалану
+                </p>
+            </div>
+
+        </div>
+        <a href="subscribe-kaspi.html" class="btn-plain btn-dark">Төлемге өту</a>
+    </div>
+</section>
+<script src="js/libs.min.js"></script>
+<script type="text/javascript" src="slick/slick.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $('.subscription-list').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 2000
+    });
+
+    $('.subscription-item').click(function () {
+        $('.subscription-item').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
+</body>
+</html>

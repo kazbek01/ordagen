@@ -1,0 +1,188 @@
+html,body,div,span,p,ul,li,ol,label,h1,h2,h3,h4,h5,h6,section{
+   margin: 0;
+   padding: 0;
+ }
+
+body{
+  //overflow-x: hidden;
+}
+ol,ul{
+  list-style: none;
+}
+button{
+  cursor: pointer;
+}
+
+a:hover,a:focus{
+  text-decoration: none;
+}
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.p0{
+  padding: 0;
+}
+.pr0{
+   padding-right: 0;
+ }
+.pl0{
+  padding-left: 0;
+}
+.pt0{
+  padding-top: 0;
+}
+.pb0{
+  padding-bottom: 0;
+}
+.pl15{
+  padding-left: 15px;
+}
+.m0{
+  margin: 0;
+}
+.mt0{
+  margin-top: 0;
+}
+.mr0{
+  margin-right: 0;
+}
+.ml0{
+   margin-left: 0;
+ }
+.mb0{
+  margin-bottom: 0;
+}
+.mt20{
+  margin-top: 20px;
+}
+.mr20{
+  margin-right: 20px;
+}
+.ml20{
+  margin-left: 20px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.mb16{
+  margin-bottom: 16px;
+}
+.mb30{
+  margin-bottom: 30px;
+}
+.ml-35{
+  margin-left: 35px;
+}
+.mr-35{
+  margin-right: 35px;
+}
+.pt40{
+  padding-top: 40px;
+}
+.pt80{
+  padding-top: 80px;
+}
+.pt30{
+  padding-top: 30px;
+}
+.pr30{
+  padding-right: 30px;
+}
+.pl30{
+  padding-left: 30px;
+}
+.pb30{
+  padding-bottom: 30px;
+}
+.mt30{
+  margin-top: 30px;
+}
+.mr30{
+  margin-right: 30px;
+}
+.ml30{
+  margin-left: 30px;
+}
+.mb30{
+  margin-bottom: 30px;
+}
+.mt50{
+  margin-top: 50px;
+}
+.mb60{
+   margin-bottom: 60px;
+ }
+.mt60{
+  margin-top: 60px;
+}
+.mt80{
+  margin-top: 80px;
+}
+.btn-plain{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  &:hover,&:focus{
+    text-decoration: none;
+    outline: none;
+    border: none;
+  }
+}
+button{
+  a{
+    color: inherit;
+  }
+  a:hover, a:focus{
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.overlay{
+  background-color: rgba(0,0,0, 0.3);
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.logo-box{
+  display: inline-block;
+}
+@mixin hover{
+  &:hover,&:focus{
+    text-decoration: none;
+  }
+}
+.tar{
+  text-align: right;
+}
+.tal{
+  text-align: left;
+}
+.tac{
+  text-align: center;
+}
+section{
+  a{
+    &:hover,&:focus{
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+.chat-content::-webkit-scrollbar
+{
+  width: 3px;
+  background-color: #F5F5F5;
+}
+
+.chat-content::-webkit-scrollbar-thumb
+{
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0 0 6px #0db24c;
+  background-color: #555;
+}
