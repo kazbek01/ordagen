@@ -458,6 +458,103 @@
   .payment-container{
     min-width: 100%;
   }
+  .book {
+    padding-bottom: 30px;
+  }
+  .book-card:hover {
+    transform: translateY(0);
+    .btn-buy {
+      background: #8CC04B;
+    }
+    .book-img-before, .book-img-after {
+      opacity: 1;
+      transition: 0.3s ease;
+    }
+    .book-card-img {
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    }
+  }
+  .book-card-caption {
+    margin-top: 15px;
+  }
+  .book-card-caption span {
+    margin-top: 5px;
+  }
+  .sticky-basket-left {
+    padding: 7px 10px;
+  }
+  .sticky-basket-right {
+    padding: 7px 15px 7px 10px;
+  }
+  .sticky-basket-left p {
+    font-size: 12px;
+  }
+  .sticky-basket-right span {
+    font-size: 12px;
+  }
+  .sticky-basket-left svg {
+    width: 20px;
+    height: 20px;
+  }
+  .book-wrapper .main-title {
+    margin-top: 10px;
+    font-size: 50px;
+  }
+  .book-list {
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .book-item {
+    padding: 15px;
+  }
+  .book-item-img {
+    width: 100px;
+    height: 170px;
+  }
+  .book-item-caption {
+    margin-left: 15px;
+  }
+  .book-list .book-item + .book-item {
+    margin-top: 15px;
+  }
+  .book-item-caption .body p {
+    display: none;
+  }
+  .book-item-caption .top {
+    display: block;
+  }
+  .book-item-caption .title {
+    font-size: 17px;
+  }
+  .book-item-caption .price {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  .book-item-caption .body {
+    margin-top: 5px;
+  }
+  .book-item .btn-buy {
+    padding: 12px 20px;
+  }
+  .book-wrapper {
+    padding-bottom: 40px;
+  }
+  .kitap-page .menu li a {
+    color: #6B7476;
+  }
+  .sticky-basket {
+    min-width: 80%;
+  }
+  #paymentModal .modal-content {
+    width: calc(100% - 30px);
+    padding: 15px;
+  }
+  #paymentModal .qr-box {
+    display: none;
+  }
+  #paymentModal .delivery-tab {
+    margin-top: 30px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -821,8 +918,23 @@
     margin-bottom: 20px;
     text-align: center;
   }
+  .book-slider {
+    margin-top: 90px;
+  }
+  .book-slider .slick-prev {
+    top: -50px;
+    right: 80px;
+    left: initial;
+  }
+  .book-slider .slick-next {
+    top: -50px;
+    right: 15px;
+    left: initial;
+  }
+  .kitap-page .menu li a {
+    color: #6B7476;
+  }
 }
-
 
 @media (min-width: 992px) and (max-width: 1024px) {
   .menu {
@@ -899,6 +1011,19 @@
         margin-bottom: 30px;
       }
     }
+  }
+  .book-slider {
+    margin-top: 90px;
+  }
+  .book-slider .slick-prev {
+    top: -50px;
+    right: 80px;
+    left: initial;
+  }
+  .book-slider .slick-next {
+    top: -50px;
+    right: 15px;
+    left: initial;
   }
 }
 

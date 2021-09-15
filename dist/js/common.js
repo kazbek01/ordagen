@@ -8,26 +8,13 @@ $(document).ready(function () {
     });
 
 
-    //FULPAGE
-    if ($(window).width() < 1224) {
-        $('#fullpage').removeAttr('id');
-    }
 
-    $('#fullpage').fullpage({
-        scrollingSpeed: 1000,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 2000,
-        verticalCentered: false,
-        responsiveWidth: 900,
-        anchors:['main', 'about' ,'platforms', 'project-map', 'projects','contents','authors'],
-    });
 
-    var wow = new WOW({
-        animateClass: 'animated',
-        offset: 100
-    });
-    wow.init();
+    // var wow = new WOW({
+    //     animateClass: 'animated',
+    //     offset: 100
+    // });
+    // wow.init();
 
 
     if ($(window).width() < 1024) {
