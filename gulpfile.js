@@ -18,6 +18,7 @@ gulp.task('sass', function(){ // Создаем таск Sass
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
+
 // gulp.task('scss', function(){ // Создаем таск Sass
 //     return gulp.src('app/scss/**/*.scss') // Берем источник
 //         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
@@ -84,10 +85,7 @@ gulp.task('img', function() {
 
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 
-    var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-        'app/css/main.css',
-        'app/css/libs.min.css'
-    ])
+    var buildCss = gulp.src('app/css/*.css') // Переносим библиотеки в продакшен
         .pipe(gulp.dest('dist/css'))
 
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
