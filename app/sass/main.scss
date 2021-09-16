@@ -2078,6 +2078,7 @@ input:checked + .slider:before {
   bottom: 30px;
   left: 50%;
   transition: 0.3s ease;
+  transform: translate(-50%, 200%);
 }
 
 .sticky-basket.show {

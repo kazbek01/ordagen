@@ -533,8 +533,14 @@
   .book-item-caption .body {
     margin-top: 5px;
   }
+  .book-item-caption .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .book-item .btn-buy {
     padding: 12px 20px;
+    width: 100%;
+    margin-top: 15px;
   }
   .book-wrapper {
     padding-bottom: 40px;
@@ -554,6 +560,9 @@
   }
   #paymentModal .delivery-tab {
     margin-top: 30px;
+  }
+  .sticky-basket {
+    bottom: 15px;
   }
 }
 

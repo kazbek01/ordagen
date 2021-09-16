@@ -2891,6 +2891,9 @@ input:checked + .slider:before {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  -webkit-transform: translate(-50%, 200%);
+      -ms-transform: translate(-50%, 200%);
+          transform: translate(-50%, 200%);
 }
 
 .sticky-basket.show {
@@ -3484,8 +3487,21 @@ input:checked + .slider:before {
   .book-item-caption .body {
     margin-top: 5px;
   }
+  .book-item-caption .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .book-item .btn-buy {
     padding: 12px 20px;
+    width: 100%;
+    margin-top: 15px;
   }
   .book-wrapper {
     padding-bottom: 40px;
@@ -3505,6 +3521,9 @@ input:checked + .slider:before {
   }
   #paymentModal .delivery-tab {
     margin-top: 30px;
+  }
+  .sticky-basket {
+    bottom: 15px;
   }
 }
 
