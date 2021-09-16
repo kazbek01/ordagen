@@ -60,7 +60,7 @@
                     <div class="bottom">
                         <div class="toggle-product-sum">
                             <button class="btn-plain sum-btn deduction-sum">-</button>
-                            <input data-value="1" value="1" disabled></input>
+                            <input value="0" disabled></input>
                             <button class="btn-plain sum-btn addition-sum">+</button>
                         </div>
                         <button class="btn-plain btn-buy">Купить</button>
@@ -83,7 +83,7 @@
                     <div class="bottom">
                         <div class="toggle-product-sum">
                             <button class="btn-plain sum-btn deduction-sum">-</button>
-                            <span data-value="1">1</span>
+                            <input value="0" disabled></input>
                             <button class="btn-plain sum-btn addition-sum">+</button>
                         </div>
                         <button class="btn-plain btn-buy">Купить</button>
@@ -106,7 +106,7 @@
                     <div class="bottom">
                         <div class="toggle-product-sum">
                             <button class="btn-plain sum-btn deduction-sum">-</button>
-                            <span data-value="1">1</span>
+                            <input value="0" disabled></input>
                             <button class="btn-plain sum-btn addition-sum">+</button>
                         </div>
                         <button class="btn-plain btn-buy">Купить</button>
@@ -129,7 +129,7 @@
                     <div class="bottom">
                         <div class="toggle-product-sum">
                             <button class="btn-plain sum-btn deduction-sum">-</button>
-                            <span data-value="1">1</span>
+                            <input value="0" disabled></input>
                             <button class="btn-plain sum-btn addition-sum">+</button>
                         </div>
                         <button class="btn-plain btn-buy">Купить</button>
@@ -156,7 +156,7 @@
 </footer>
 
 <!--добавь класс 'show' и появится корзина-->
-<div class="sticky-basket show">
+<div class="sticky-basket">
     <div class="sticky-basket-left">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.51362 8.03053L6.61085 4H4" stroke="#819299" stroke-linecap="round" stroke-linejoin="round"/>
@@ -253,6 +253,27 @@
     $('#paymentModal .close-modal').click(function (){
         $('#paymentModal').modal('hide');
     })
+
+
+    //sticky basket
+    $(document).ready(function (){
+        let basketHeight = $('.sticky-basket').outerHeight(),
+            basketDistBottom = basketHeight + 30 + 'px';
+
+        document.querySelector('.sticky-basket').style.transform = "translate(-50%,  " + (basketDistBottom) +")";
+    })
+
+    //это просто мой пример (мусор)
+    // $('.toggle-product-sum .btn-plain').click(function (){
+    //     $('.sticky-basket').addClass('show');
+    //     let input = $(this).closest('.toggle-product-sum').find('input');
+    //
+    //     if($(this).hasClass('addition-sum')){
+    //         input.val(parseInt(input.val()) + 1);
+    //     } else if ($(this).hasClass('deduction-sum') && $(this).next('input').val() >= 1) {
+    //         input.val(parseInt(input.val()) - 1);
+    //     }
+    // });
 
 </script>
 
