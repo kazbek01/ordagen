@@ -225,6 +225,122 @@
         </div>
     </div>
 </div>
+<div class="modal" id="basketModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h6>Оформление заказа</h6>
+            <button class="btn-plain close-modal">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="20" fill="#F5F5F5"/>
+                    <path d="M13.333 26.6667L26.6663 13.3333M13.333 13.3333L26.6663 26.6667" stroke="#819299"/>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="basket-book-wrapper">
+                <div class="basket-book">
+                    <div class="basket-book-img">
+                        <img src="img/main/book-img.png">
+                    </div>
+                    <div class="basket-book-right">
+                        <div class="basket-book-title">
+                            <h6>«ORDA ертегілері» толық жинақ кітабы</h6>
+                            <button class="btn-plain btn-delete-book">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33301 16.6667L16.6663 3.33334M3.33301 3.33334L16.6663 16.6667" stroke="#FE5244"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="basket-book-price">
+                            <p>1500₸</p>
+                            <span>x2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-book">
+                    <div class="basket-book-img">
+                        <img src="img/main/book-img.png">
+                    </div>
+                    <div class="basket-book-right">
+                        <div class="basket-book-title">
+                            <h6>«ORDA ертегілері» толық жинақ кітабы</h6>
+                            <button class="btn-plain btn-delete-book">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33301 16.6667L16.6663 3.33334M3.33301 3.33334L16.6663 16.6667" stroke="#FE5244"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="basket-book-price">
+                            <p>1500₸</p>
+                            <span>x2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-book">
+                    <div class="basket-book-img">
+                        <img src="img/main/book-img.png">
+                    </div>
+                    <div class="basket-book-right">
+                        <div class="basket-book-title">
+                            <h6>«ORDA ертегілері» толық жинақ кітабы</h6>
+                            <button class="btn-plain btn-delete-book">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33301 16.6667L16.6663 3.33334M3.33301 3.33334L16.6663 16.6667" stroke="#FE5244"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="basket-book-price">
+                            <p>1500₸</p>
+                            <span>x2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-book">
+                    <div class="basket-book-img">
+                        <img src="img/main/book-img.png">
+                    </div>
+                    <div class="basket-book-right">
+                        <div class="basket-book-title">
+                            <h6>«ORDA ертегілері» толық жинақ кітабы</h6>
+                            <button class="btn-plain btn-delete-book">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33301 16.6667L16.6663 3.33334M3.33301 3.33334L16.6663 16.6667" stroke="#FE5244"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="basket-book-price">
+                            <p>1500₸</p>
+                            <span>x2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-book">
+                    <div class="basket-book-img">
+                        <img src="img/main/book-img.png">
+                    </div>
+                    <div class="basket-book-right">
+                        <div class="basket-book-title">
+                            <h6>«ORDA ертегілері» толық жинақ кітабы</h6>
+                            <button class="btn-plain btn-delete-book">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33301 16.6667L16.6663 3.33334M3.33301 3.33334L16.6663 16.6667" stroke="#FE5244"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="basket-book-price">
+                            <p>1500₸</p>
+                            <span>x2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-bottom">
+            <h6>Cумма к оплате 9000₸</h6>
+            <button class="btn-plain btn-buy">Продолжить</button>
+        </div>
+    </div>
+</div>
 
 <script src="js/libs.min.js"></script>
 <script src="js/wow.min.js"></script>
@@ -248,11 +364,19 @@
 
     //Модалка
     $('.book-item-caption .btn-buy').click(function (){
-        $('#paymentModal').modal('show');
+        $('#basketModal').modal('show');
     })
+    $('#basketModal .close-modal').click(function (){
+        $('#basketModal').modal('hide');
+    });
+
+    $('#basketModal .btn-buy').click(function (){
+        $('#basketModal').modal('hide');
+        $('#paymentModal').modal('show');
+    });
     $('#paymentModal .close-modal').click(function (){
         $('#paymentModal').modal('hide');
-    })
+    });
 
 
     // // это просто мой пример (мусор)

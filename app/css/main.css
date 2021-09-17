@@ -2965,6 +2965,191 @@ input:checked + .slider:before {
   height: 100%;
 }
 
+#basketModal .modal-content {
+  width: 770px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0 auto;
+  max-height: 750px;
+  overflow-y: auto;
+  background: #FFFFFF;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  padding: 20px 20px 24px 20px;
+  border: none;
+  min-height: 300px;
+}
+
+#basketModal .modal-header {
+  padding: 0;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#basketModal .modal-header h6 {
+  font-family: SF Pro Text;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+
+#basketModal .close-modal {
+  width: 40px;
+  height: 40px;
+}
+
+#basketModal .modal-body {
+  padding: 10px 0 0 0;
+}
+
+.basket-book-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: -5px;
+}
+
+.basket-book {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(50% - 10px);
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding: 10px;
+}
+
+.basket-book-img {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  overflow: hidden;
+}
+
+.basket-book-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.basket-book-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.basket-book-title h6 {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  color: #11859A;
+}
+
+.btn-delete-book {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.basket-book-price {
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.basket-book-price p {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  color: #E64938;
+}
+
+.basket-book-price span {
+  margin-left: 4px;
+  font-family: SF Pro Display;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  color: #000000;
+  display: block;
+}
+
+.basket-book-right {
+  margin-left: 10px;
+}
+
+#basketModal .modal-bottom {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#basketModal .modal-bottom h6 {
+  font-family: "SF Pro Text Medium";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+
 @media screen and (device-aspect-ratio: 40 / 71) {
   .audio {
     background: white;
@@ -3001,7 +3186,7 @@ input:checked + .slider:before {
   }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .space-otto {
     left: 7.5%;
     top: 8.3%;
@@ -3515,6 +3700,8 @@ input:checked + .slider:before {
   #paymentModal .modal-content {
     width: calc(100% - 30px);
     padding: 15px;
+    max-height: calc(100% - 130px);
+    min-height: 350px;
   }
   #paymentModal .qr-box {
     display: none;
@@ -3524,6 +3711,36 @@ input:checked + .slider:before {
   }
   .sticky-basket {
     bottom: 15px;
+  }
+  #basketModal .modal-content {
+    width: calc(100% - 30px);
+    padding: 15px;
+    max-height: calc(100% - 130px);
+    min-height: 350px;
+  }
+  #basketModal .basket-book-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #basketModal .basket-book {
+    width: calc(100% - 10px);
+  }
+  #basketModal .modal-body {
+    padding-top: 15px;
+  }
+  #basketModal .modal-bottom {
+    display: block;
+    margin-top: 15px;
+    text-align: right;
+  }
+  #basketModal .modal-bottom h6 {
+    font-size: 20px;
+  }
+  #basketModal .btn-buy {
+    margin-top: 10px;
   }
 }
 
@@ -3881,6 +4098,18 @@ input:checked + .slider:before {
   }
   .kitap-page .menu li a {
     color: #6B7476;
+  }
+  #basketModal .modal-content {
+    width: 90%;
+  }
+  .basket-book-title h6 {
+    font-size: 15px;
+  }
+  .basket-book-price p {
+    font-size: 14px;
+  }
+  .basket-book-price span {
+    font-size: 14px;
   }
 }
 

@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .space-otto {
     left: 7.5%;
     top: 8.3%;
@@ -554,6 +554,8 @@
   #paymentModal .modal-content {
     width: calc(100% - 30px);
     padding: 15px;
+    max-height: calc(100% - 130px);
+    min-height: 350px;
   }
   #paymentModal .qr-box {
     display: none;
@@ -563,6 +565,32 @@
   }
   .sticky-basket {
     bottom: 15px;
+  }
+  #basketModal .modal-content {
+    width: calc(100% - 30px);
+    padding: 15px;
+    max-height: calc(100% - 130px);
+    min-height: 350px;
+  }
+  #basketModal .basket-book-wrapper {
+    flex-direction: column;
+  }
+  #basketModal .basket-book {
+    width: calc(100% - 10px);
+  }
+  #basketModal .modal-body {
+    padding-top: 15px;
+  }
+  #basketModal .modal-bottom {
+    display: block;
+    margin-top: 15px;
+    text-align: right;
+  }
+  #basketModal .modal-bottom h6 {
+    font-size: 20px;
+  }
+  #basketModal .btn-buy {
+    margin-top: 10px;
   }
 }
 
@@ -942,6 +970,18 @@
   }
   .kitap-page .menu li a {
     color: #6B7476;
+  }
+  #basketModal .modal-content {
+    width: 90%;
+  }
+  .basket-book-title h6 {
+    font-size: 15px;
+  }
+  .basket-book-price p {
+    font-size: 14px;
+  }
+  .basket-book-price span {
+    font-size: 14px;
   }
 }
 
