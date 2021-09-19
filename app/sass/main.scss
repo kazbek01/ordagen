@@ -1927,12 +1927,26 @@ input:checked + .slider:before {
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
-    max-height: 750px;
-    overflow-y: auto;
+    max-height: calc(100% - 50px);
     background: #FFFFFF;
     border-radius: 25px;
     padding: 20px 20px 24px 20px;
     border: none;
+  }
+  .modal-body {
+    padding: 10px 0 0 0;
+    max-height: calc(100% - 46px);
+    overflow-y: auto;
+  }
+  .modal-body::-webkit-scrollbar {
+    width: 4px;
+  }
+  .modal-body::-webkit-scrollbar-track {
+    background: #F5F5F5;
+    border-radius: 12px;
+  }
+  .modal-body::-webkit-scrollbar-thumb {
+    background: #8CC04B;
   }
   .modal-header {
     padding: 0;
@@ -1951,9 +1965,6 @@ input:checked + .slider:before {
   }
   .close-modal {
     padding: 0;
-  }
-  .modal-body {
-    padding: 10px 0 0 0;
   }
   .qr-box {
     background: #C0C0C0;
@@ -2140,13 +2151,28 @@ input:checked + .slider:before {
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
-    max-height: 750px;
-    overflow-y: auto;
+    max-height: calc(100% - 50px);
     background: #FFFFFF;
     border-radius: 25px;
     padding: 20px 20px 24px 20px;
     border: none;
     min-height: 300px;
+  }
+  .modal-body {
+    padding: 10px 0 0 0;
+    max-height: calc(100% - 106px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .modal-body::-webkit-scrollbar {
+    width: 4px;
+  }
+  .modal-body::-webkit-scrollbar-track {
+    background: #F5F5F5;
+    border-radius: 12px;
+  }
+  .modal-body::-webkit-scrollbar-thumb {
+    background: #8CC04B;
   }
   .modal-header {
     padding: 0;
@@ -2166,9 +2192,6 @@ input:checked + .slider:before {
   .close-modal {
     width: 40px;
     height: 40px;
-  }
-  .modal-body {
-    padding: 10px 0 0 0;
   }
 }
 

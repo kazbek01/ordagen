@@ -2656,13 +2656,32 @@ input:checked + .slider:before {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   margin: 0 auto;
-  max-height: 750px;
-  overflow-y: auto;
+  max-height: calc(100% - 50px);
   background: #FFFFFF;
   -webkit-border-radius: 25px;
           border-radius: 25px;
   padding: 20px 20px 24px 20px;
   border: none;
+}
+
+#paymentModal .modal-body {
+  padding: 10px 0 0 0;
+  max-height: calc(100% - 46px);
+  overflow-y: auto;
+}
+
+#paymentModal .modal-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+#paymentModal .modal-body::-webkit-scrollbar-track {
+  background: #F5F5F5;
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+}
+
+#paymentModal .modal-body::-webkit-scrollbar-thumb {
+  background: #8CC04B;
 }
 
 #paymentModal .modal-header {
@@ -2693,10 +2712,6 @@ input:checked + .slider:before {
 
 #paymentModal .close-modal {
   padding: 0;
-}
-
-#paymentModal .modal-body {
-  padding: 10px 0 0 0;
 }
 
 #paymentModal .qr-box {
@@ -2972,14 +2987,34 @@ input:checked + .slider:before {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   margin: 0 auto;
-  max-height: 750px;
-  overflow-y: auto;
+  max-height: calc(100% - 50px);
   background: #FFFFFF;
   -webkit-border-radius: 25px;
           border-radius: 25px;
   padding: 20px 20px 24px 20px;
   border: none;
   min-height: 300px;
+}
+
+#basketModal .modal-body {
+  padding: 10px 0 0 0;
+  max-height: calc(100% - 106px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#basketModal .modal-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+#basketModal .modal-body::-webkit-scrollbar-track {
+  background: #F5F5F5;
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+}
+
+#basketModal .modal-body::-webkit-scrollbar-thumb {
+  background: #8CC04B;
 }
 
 #basketModal .modal-header {
@@ -3011,10 +3046,6 @@ input:checked + .slider:before {
 #basketModal .close-modal {
   width: 40px;
   height: 40px;
-}
-
-#basketModal .modal-body {
-  padding: 10px 0 0 0;
 }
 
 .basket-book-wrapper {
