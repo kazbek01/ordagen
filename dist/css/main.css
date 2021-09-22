@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, p, ul, li, ol, label, h1, h2, h3, h4, h5, h6, section {
   margin: 0;
   padding: 0;
@@ -2801,6 +2802,13 @@ input:checked + .slider:before {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 #paymentModal .delivery-tab li {
@@ -2808,11 +2816,25 @@ input:checked + .slider:before {
 }
 
 #paymentModal .delivery-tab li + li {
-  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#paymentModal .delivery-tab li:first-child {
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 #paymentModal .tab-content {
   padding-top: 0;
+}
+
+#paymentModal .delivery-tab-content {
+  display: none;
+}
+
+#paymentModal .delivery-tab-content.active {
+  display: block;
 }
 
 #paymentModal .btn-buy {
@@ -2878,14 +2900,25 @@ input:checked + .slider:before {
   display: none;
 }
 
-.delivery-tab .active .checkbox-form .checkmark {
+.checkbox-form input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-form input:checked ~ .checkmark {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFC674), to(#F6A632)), #F6A632;
   background: -webkit-linear-gradient(top, #FFC674 0%, #F6A632 100%), #F6A632;
   background: -o-linear-gradient(top, #FFC674 0%, #F6A632 100%), #F6A632;
   background: linear-gradient(180deg, #FFC674 0%, #F6A632 100%), #F6A632;
 }
 
-.delivery-tab .active .checkbox-form .checkmark:after {
+.checkbox-form input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -3197,6 +3230,16 @@ input:checked + .slider:before {
 
 .sticky-basket-overlay.show {
   display: block;
+}
+
+.tabs__content {
+  display: none;
+  /* по умолчанию прячем все блоки */
+}
+
+.tabs__content.active {
+  display: block;
+  /* по умолчанию показываем нужный блок */
 }
 
 @media screen and (device-aspect-ratio: 40 / 71) {
@@ -3749,7 +3792,7 @@ input:checked + .slider:before {
   #paymentModal .modal-content {
     width: calc(100% - 30px);
     padding: 15px;
-    max-height: calc(100% - 130px);
+    max-height: calc(100% - 100px);
     min-height: 350px;
   }
   #paymentModal .qr-box {
@@ -3764,7 +3807,7 @@ input:checked + .slider:before {
   #basketModal .modal-content {
     width: calc(100% - 30px);
     padding: 15px;
-    max-height: calc(100% - 130px);
+    max-height: calc(100% - 100px);
     min-height: 350px;
   }
   #basketModal .basket-book-wrapper {

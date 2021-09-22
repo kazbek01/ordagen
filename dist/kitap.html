@@ -155,6 +155,19 @@
     </div>
 </footer>
 
+<div class="tabs">
+    <ul class="tabs__caption">
+        <li class="active">1-я вкладка</li>
+        <li>2-я вкладка</li>
+    </ul>
+    <div class="tabs__content active">
+        Содержимое первого блока
+    </div>
+    <div class="tabs__content">
+        Содержимое второго блока
+    </div>
+</div>
+
 <!--добавь класс 'show' и появится корзина-->
 <div class="sticky-basket">
     <div class="sticky-basket-left">
@@ -191,29 +204,27 @@
                 <input type="text" class="phone-mask" placeholder="Whatsapp / Telegram">
                 <input type="email" placeholder="Электронная почта">
             </div>
-            <ul class="nav nav-tabs delivery-tab">
-                <li>
-                    <a class="active" data-toggle="tab" href="#delivery1">
-                        <div class="checkbox-form">
-                            Самовывоз
-                            <span class="checkmark"></span>
-                        </div>
-                    </a>
+            <ul class="delivery-tab">
+                <li class="delivery-tablink active">
+                    <div class="checkbox-form">
+                        Самовывоз
+                        <input type="radio" name="is_delivery" checked>
+                        <span class="checkmark"></span>
+                    </div>
                 </li>
-                <li>
-                    <a data-toggle="tab" href="#delivery2">
-                        <div class="checkbox-form">
-                            Доставка
-                            <span class="checkmark"></span>
-                        </div>
-                    </a>
+                <li class="delivery-tablink">
+                    <div class="checkbox-form">
+                        Доставка
+                        <input type="radio" name="is_delivery">
+                        <span class="checkmark"></span>
+                    </div>
                 </li>
             </ul>
             <div class="tab-content">
-                <div id="delivery1" class="tab-pane active">
+                <div class="delivery-tab-content active">
                     <p class="address-text">г. Алматы, ул. Богенбай батыра, 150</p>
                 </div>
-                <div id="delivery2" class="tab-pane">
+                <div class="delivery-tab-content">
                     <div class="input-wrapper">
                         <input placeholder="Город">
                         <input placeholder="Почтовый индекс">
@@ -345,6 +356,7 @@
 <div class="sticky-basket-overlay"></div>
 
 
+
 <script src="js/libs.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/common.js"></script>
@@ -381,6 +393,12 @@
         $('#paymentModal').modal('hide');
     });
 
+    //delivery tab
+    $('.delivery-tablink').click(function() {
+        $('.delivery-tablink').removeClass('active');
+        $(this).addClass('active');
+        $(this).closest('.delivery-tab').next('.tab-content').find('.delivery-tab-content').removeClass('active').eq($(this).index()).addClass('active');
+    });
 
     // это просто мой пример (мусор)
     // $('.toggle-product-sum .btn-plain').click(function (){

@@ -554,7 +554,7 @@
   #paymentModal .modal-content {
     width: calc(100% - 30px);
     padding: 15px;
-    max-height: calc(100% - 130px);
+    max-height: calc(100% - 100px);
     min-height: 350px;
   }
   #paymentModal .qr-box {
@@ -569,7 +569,7 @@
   #basketModal .modal-content {
     width: calc(100% - 30px);
     padding: 15px;
-    max-height: calc(100% - 130px);
+    max-height: calc(100% - 100px);
     min-height: 350px;
   }
   #basketModal .basket-book-wrapper {

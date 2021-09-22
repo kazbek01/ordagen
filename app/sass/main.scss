@@ -2011,15 +2011,28 @@ input:checked + .slider:before {
     margin-top: 10px;
     justify-content: flex-start;
     margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .delivery-tab li {
     padding: 0;
   }
   .delivery-tab li + li {
-    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .delivery-tab li:first-child {
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
   .tab-content {
     padding-top: 0;
+  }
+  .delivery-tab-content {
+    display: none;
+  }
+  .delivery-tab-content.active {
+    display: block;
   }
   .btn-buy {
     margin-top: 20px;
@@ -2071,11 +2084,22 @@ input:checked + .slider:before {
   display: none;
 }
 
-.delivery-tab .active .checkbox-form .checkmark {
+.checkbox-form input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-form input:checked ~ .checkmark {
   background: linear-gradient(180deg, #FFC674 0%, #F6A632 100%), #F6A632;
 }
 
-.delivery-tab .active .checkbox-form .checkmark:after {
+.checkbox-form input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -2305,6 +2329,13 @@ input:checked + .slider:before {
   display: block;
 }
 
+
+.tabs__content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+  display: block; /* по умолчанию показываем нужный блок */
+}
 
 
 
